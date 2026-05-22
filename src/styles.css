@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Plus Jakarta Sans", serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-emerald-deep: var(--emerald-deep);
+  --color-platinum: var(--platinum);
+  --color-cream: var(--cream);
+  --color-ink: var(--ink);
+
+  --shadow-soft: 0 1px 2px oklch(0.2 0.02 160 / 0.04), 0 8px 24px oklch(0.2 0.02 160 / 0.06);
+  --shadow-luxe: 0 2px 4px oklch(0.2 0.02 160 / 0.04), 0 20px 60px oklch(0.2 0.02 160 / 0.12);
+  --shadow-glow: 0 8px 40px oklch(0.34 0.12 255 / 0.28);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Premium light palette */
+  --background: oklch(0.995 0.003 95); /* warm ivory white */
+  --foreground: oklch(0.18 0.012 200); /* rich ink */
+  --ink: oklch(0.14 0.012 200);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.012 200);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.012 200);
+
+  --primary: oklch(0.36 0.06 165); /* deep emerald */
+  --primary-foreground: oklch(0.99 0.005 95);
+  --emerald-deep: oklch(0.32 0.07 165);
+
+  --secondary: oklch(0.96 0.008 95); /* cream */
+  --secondary-foreground: oklch(0.18 0.012 200);
+  --cream: oklch(0.97 0.012 85);
+
+  --muted: oklch(0.95 0.006 200); /* platinum gray */
+  --muted-foreground: oklch(0.45 0.012 200);
+  --platinum: oklch(0.92 0.006 200);
+
+  --accent: oklch(0.55 0.08 175); /* elegant teal */
+  --accent-foreground: oklch(0.99 0.005 95);
+
+  --gold: oklch(0.74 0.12 80); /* soft gold */
+  --gold-soft: oklch(0.88 0.07 85);
+
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.99 0.005 95);
+
+  --border: oklch(0.9 0.006 200 / 0.7);
+  --input: oklch(0.92 0.006 200);
+  --ring: oklch(0.55 0.08 175);
+}
+
+.dark {
+  --background: oklch(0.14 0.012 200);
+  --foreground: oklch(0.97 0.005 95);
+  --card: oklch(0.18 0.012 200);
+  --card-foreground: oklch(0.97 0.005 95);
+  --popover: oklch(0.18 0.012 200);
+  --popover-foreground: oklch(0.97 0.005 95);
+  --primary: oklch(0.74 0.1 165);
+  --primary-foreground: oklch(0.14 0.012 200);
+  --secondary: oklch(0.22 0.012 200);
+  --secondary-foreground: oklch(0.97 0.005 95);
+  --muted: oklch(0.22 0.012 200);
+  --muted-foreground: oklch(0.7 0.012 200);
+  --accent: oklch(0.62 0.08 175);
+  --accent-foreground: oklch(0.14 0.012 200);
+  --border: oklch(1 0 0 / 0.1);
+  --input: oklch(1 0 0 / 0.15);
+  --ring: oklch(0.62 0.08 175);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  .shadow-luxe {
+    box-shadow: var(--shadow-luxe);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glass {
+    background: color-mix(in oklab, var(--background) 65%, transparent);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+  }
+
+  .bg-luxe-gradient {
+    background-image:
+      radial-gradient(60% 60% at 80% 0%, oklch(0.88 0.07 85 / 0.35) 0%, transparent 60%),
+      radial-gradient(50% 60% at 0% 100%, oklch(0.55 0.08 175 / 0.2) 0%, transparent 60%),
+      linear-gradient(180deg, var(--background), var(--cream));
+  }
+
+  .bg-emerald-gradient {
+    background-image: linear-gradient(
+      135deg,
+      oklch(0.18 0.05 260),
+      oklch(0.34 0.12 255) 55%,
+      oklch(0.46 0.14 250)
+    );
+  }
+  .text-gold {
+    color: var(--gold);
+  }
+  .border-gold {
+    border-color: var(--gold);
+  }
+
+  .ring-luxe {
+    box-shadow: 0 0 0 1px oklch(0.9 0.006 200 / 0.6);
+  }
+
+  .hover-lift {
+    transition:
+      transform 300ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 300ms ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-luxe);
+  }
+
+  .divider-gold {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-14px) rotate(0.5deg);
+  }
+}
+@keyframes shimmer-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-float {
+  animation: float-slow 8s ease-in-out infinite;
+}
+.animate-float-delayed {
+  animation: float-slow 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
