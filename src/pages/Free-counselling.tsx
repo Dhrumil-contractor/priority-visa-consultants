@@ -19,7 +19,9 @@ export default function CounsellingPage() {
               onSubmit={(e) => e.preventDefault()}
               className="rounded-3xl border border-border bg-card p-8 shadow-luxe"
             >
-              <p className="font-display text-2xl text-ink">Tell us about you</p>
+              <p className="font-display text-2xl text-ink">
+                Tell us about you
+              </p>
               <p className="mt-1 text-sm text-muted-foreground">
                 We'll call you back within one business day.
               </p>
@@ -28,8 +30,14 @@ export default function CounsellingPage() {
                 <Field label="Full name" placeholder="Aanya Sharma" />
                 <Field label="Phone" placeholder="+91 98765 43210" />
                 <Field label="Email" placeholder="you@email.com" type="email" />
-                <Select label="Service interest" options={SERVICES.map((s) => s.title)} />
-                <Select label="Country interest" options={COUNTRIES.map((c) => c.name)} />
+                <Select
+                  label="Service interest"
+                  options={SERVICES.map((s) => s.title)}
+                />
+                <Select
+                  label="Country interest"
+                  options={COUNTRIES.map((c) => c.name)}
+                />
                 <Field label="Preferred date" type="date" />
               </div>
 
@@ -46,8 +54,8 @@ export default function CounsellingPage() {
                 <Calendar className="h-4 w-4" /> Book my free consultation
               </button>
               <p className="mt-3 inline-flex items-center gap-1.5 text-[11px] text-muted-foreground">
-                <ShieldCheck className="h-3 w-3 text-primary" /> Your details stay private. We never
-                spam.
+                <ShieldCheck className="h-3 w-3 text-primary" /> Your details
+                stay private. We never spam.
               </p>
             </form>
           </Reveal>
@@ -109,7 +117,13 @@ function Field({
   );
 }
 
-function Select({ label, options }: { label: string; options: readonly string[] }) {
+function Select({
+  label,
+  options,
+}: {
+  label: string;
+  options: readonly string[];
+}) {
   return (
     <label className="block">
       <span className="block text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
