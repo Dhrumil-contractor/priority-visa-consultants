@@ -16,7 +16,6 @@ export default function Home() {
     <PageTransition>
       <Hero />
       <About />
-      <Founder />
       <Services />
       <Countries />
       <WhyUs />

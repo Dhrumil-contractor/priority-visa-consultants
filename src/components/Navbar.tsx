@@ -4,6 +4,7 @@ import { NAV_LINKS, COMPANY } from "@/data/site";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -24,23 +25,13 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
-        scrolled ? "glass border-b border-border/60 py-3" : "bg-transparent py-5",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500 h-16",
+        scrolled ? "glass border-b border-border/60" : "bg-transparent",
       )}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
+      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link to="/" className="group flex items-center gap-2.5">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-gradient text-primary-foreground shadow-glow">
-            <Globe2 className="h-4.5 w-4.5" strokeWidth={2.2} />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-[1.05rem] font-medium tracking-tight text-ink">
-              Priority Visa
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-              Consultancy
-            </span>
-          </span>
+          <img src={logo} alt="Priority Visa Consultancy" className="h-30 w-30" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

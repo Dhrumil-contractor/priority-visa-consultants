@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 import CountriesPage from "./pages/Countries";
 import PackagesPage from "./pages/Tour-packages";
 import StoriesPage from "./pages/Success-stories";
-import CounsellingPage from "./pages/Free-counselling";
+import CounsellingPage from "./pages/free-counselling";
 
 export default function App() {
   const location = useLocation();

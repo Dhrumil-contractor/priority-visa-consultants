@@ -71,7 +71,7 @@ export default function ContactPage() {
                   <div className="absolute inset-0 grid place-items-center">
                     <div className="text-center">
                       <MapPin className="mx-auto h-8 w-8 text-primary" />
-                      <p className="mt-2 font-display text-lg text-ink">Bengaluru Head Office</p>
+                      <p className="mt-2 font-display text-lg text-ink">Bharuch Head Office</p>
                       <p className="text-xs text-muted-foreground">{COMPANY.address}</p>
                     </div>
                   </div>

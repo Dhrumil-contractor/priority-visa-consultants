@@ -294,11 +294,19 @@ export const STATS = [
 ] as const;
 
 export const COMPANY = {
-  name: "Priority Visa Consultancy",
+  name: "Priority Visa Consultants",
   short: "Priority Visa",
   tagline: "Your Global Journey Starts Here.",
-  phone: "+91 98765 43210",
-  whatsapp: "919876543210",
-  email: "hello@priorityvisa.com",
-  address: "2nd Floor, Crescent Plaza, MG Road, Bengaluru 560001",
+  phone: "91 90164 23501",
+  whatsapp: "9016423501",
+  email: "info@priorityvisaconsultants.com",
+  address:
+    "704, Beside SBI ATM, Main Market, Station Road, Palej - 392220, Bharuch, Gujarat, India",
 } as const;
+
+export const SOCIAL_LINKS = {
+  instagram: "https://www.instagram.com/priorityvisaconsultants/",
+  facebook:
+    "https://www.facebook.com/profile.php?id=61577972340228&mibextid=wwXIfr&rdid=GNJQijGnrOygIhKZ&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19VZhzCUNf%2F%3Fmibextid%3DwwXIfr%26ref%3D1#",
+  linkedin: "https://www.linkedin.com/company/priorityvisaconsultants/",
+};

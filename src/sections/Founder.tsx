@@ -18,8 +18,8 @@ export default function Founder() {
                   loading="lazy"
                 />
               </div>
-              <div className="glass absolute -bottom-6 left-6 right-6 rounded-2xl border border-border p-4 shadow-luxe sm:left-10 sm:right-auto">
-                <p className="font-display text-lg text-ink">Varun Mehta</p>
+              <div className="bg-white absolute -bottom-6 left-6 right-4 rounded-2xl border border-border p-4 shadow-luxe sm:left-10 sm:right-auto">
+                <p className="font-display text-lg font-bold text-ink">Varun Mehta</p>
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   Founder & Visa Consultant
                 </p>
@@ -39,13 +39,24 @@ export default function Founder() {
 
               <div className="mt-6 rounded-3xl border border-border bg-secondary/60 p-7">
                 <Quote className="h-6 w-6 text-gold" />
-                <p className="mt-3 text-[16px] leading-relaxed text-foreground">
-                  "I started Priority Visa Consultancy after watching too many families lose money
-                  and time to bad advice. Our job is simple — tell you the truth about your profile,
-                  recommend only what fits your goal, and stay with you until you land. Helping
-                  students, families and professionals achieve their international dreams with
-                  honest guidance and personalised support is the only business I want to be in."
-                </p>
+                <div className="mt-3 text-[16px] leading-relaxed text-foreground">
+                  <b>Varun Mehta,</b> Founder & Proprietor of Priority Visa Consultants, brings over
+                  8 years of experience in the immigration and visa industry, combined with valuable
+                  firsthand experience of living in the United Kingdom. His unique perspective
+                  allows him to understand both the technical requirements of visa processes and the
+                  real-life challenges faced by individuals moving abroad.
+                </div>
+                <div className="mt-3">
+                  Driven by a commitment to integrity, transparency, and client success, Varun has
+                  helped numerous students, professionals, and travelers achieve their international
+                  goals. Under his leadership, Priority Visa Consultants continues to provide
+                  reliable, personalized, and result-oriented guidance for study, work, visitor, and
+                  immigration pathways across major destinations worldwide.
+                </div>
+                <div className="mt-3">
+                  "Every successful journey abroad begins with the right guidance, and we're
+                  committed to providing it."
+                </div>
                 <p className="mt-5 font-display text-xl italic text-primary">— Varun Mehta</p>
                 <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
                   Founder & Visa Consultant

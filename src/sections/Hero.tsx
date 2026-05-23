@@ -28,7 +28,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="mt-6 font-display text-[2.6rem] leading-[1.05] tracking-tight text-balance text-ink sm:text-6xl lg:text-[4.2rem]"
           >
-            Your <em className="not-italic text-primary">global journey</em>
+            Your{" "}
+            <em className="not-italic bg-emerald-gradient bg-clip-text text-transparent">
+              global journey
+            </em>
             <br className="hidden sm:block" /> starts here.
           </motion.h1>
 
@@ -57,9 +60,10 @@ export default function Hero() {
             </Link>
             <Link
               to="/countries"
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-medium text-foreground shadow-soft transition hover:bg-secondary"
+              className="group inline-flex items-center gap-2 rounded-full bg-emerald-gradient px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:-translate-y-0.5"
             >
               Explore Countries
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </motion.div>
 
@@ -69,17 +73,6 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4 text-xs text-muted-foreground"
           >
-            <div className="flex items-center gap-2">
-              <div className="flex -space-x-1.5">
-                {[1, 2, 3, 4].map((i) => (
-                  <span
-                    key={i}
-                    className="h-7 w-7 rounded-full border-2 border-background bg-gradient-to-br from-secondary to-platinum"
-                  />
-                ))}
-              </div>
-              <span>8,500+ approvals</span>
-            </div>
             <div className="flex items-center gap-1.5">
               {[0, 1, 2, 3, 4].map((i) => (
                 <Star key={i} className="h-3.5 w-3.5 fill-gold text-gold" />
@@ -111,7 +104,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="glass absolute -left-5 top-10 w-56 rounded-2xl border border-border p-3.5 shadow-luxe"
+              className="glass absolute  top-10 w-56 rounded-2xl border border-border p-3.5 shadow-luxe"
             >
               <div className="flex items-center gap-2.5">
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-gradient text-primary-foreground">
@@ -129,7 +122,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="glass absolute -right-4 top-1/2 w-44 rounded-2xl border border-border p-3.5 shadow-luxe"
+              className="glass absolute -right-1 top-1/2 w-44 rounded-2xl border border-border p-3.5 shadow-luxe"
             >
               <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
                 Next flight
@@ -144,7 +137,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-              className="glass absolute -bottom-4 left-6 flex w-64 items-center gap-3 rounded-2xl border border-border p-3.5 shadow-luxe"
+              className="glass absolute -bottom-1 left-6 flex w-64 items-center gap-3 rounded-2xl border border-border p-3.5 shadow-luxe"
             >
               <div className="flex -space-x-1.5">
                 {COUNTRIES.slice(0, 4).map((c) => (

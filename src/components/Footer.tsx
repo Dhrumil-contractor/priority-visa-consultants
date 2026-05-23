@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Globe2, Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
-import { COMPANY, COUNTRIES, SERVICES } from "@/data/site";
+import { COMPANY, COUNTRIES, SERVICES, SOCIAL_LINKS } from "@/data/site";
 
 export function Footer() {
   return (
@@ -35,10 +35,16 @@ export function Footer() {
           </form>
 
           <div className="mt-6 flex gap-2">
-            {[Instagram, Facebook, Linkedin, Youtube].map((Icon, i) => (
+            {[
+              { Icon: Instagram, url: SOCIAL_LINKS.instagram },
+              { Icon: Facebook, url: SOCIAL_LINKS.facebook },
+              { Icon: Linkedin, url: SOCIAL_LINKS.linkedin },
+            ].map(({ Icon, url }, i) => (
               <a
                 key={i}
-                href="#"
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground transition hover:text-primary"
                 aria-label="Social"
               >
@@ -84,7 +90,7 @@ export function Footer() {
               <Mail className="h-3 w-3" /> {COMPANY.email}
             </span>
             <span className="inline-flex items-center gap-1.5">
-              <MapPin className="h-3 w-3" /> Bengaluru, IN
+              <MapPin className="h-3 w-3" /> Palej, Gujarat, India
             </span>
           </div>
         </div>
