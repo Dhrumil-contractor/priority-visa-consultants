@@ -1,5 +1,14 @@
 import { Link } from "react-router-dom";
-import { Globe2, Mail, Phone, MapPin, Instagram, Facebook, Linkedin, Youtube } from "lucide-react";
+import {
+  Globe2,
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+  Linkedin,
+  Youtube,
+} from "lucide-react";
 import { COMPANY, COUNTRIES, SERVICES, SOCIAL_LINKS } from "@/data/site";
 
 export function Footer() {
@@ -12,11 +21,13 @@ export function Footer() {
             <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-gradient text-primary-foreground">
               <Globe2 className="h-4.5 w-4.5" />
             </span>
-            <span className="font-display text-lg text-ink">Priority Visa Consultancy</span>
+            <span className="font-display text-lg text-ink">
+              Priority Visa Consultancy
+            </span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Honest, premium visa guidance for students, families and professionals reaching for
-            their international dreams.
+            Honest, premium visa guidance for students, families and
+            professionals reaching for their international dreams.
           </p>
 
           <form
@@ -61,14 +72,16 @@ export function Footer() {
             ["/services", "Services"],
             ["/countries", "Countries"],
             ["/success-stories", "Success Stories"],
-            ["/free-counselling", "Free Counselling"],
+            // ["/free-counselling", "Free Counselling"],
             ["/contact", "Contact"],
           ]}
         />
 
         <FooterCol
           title="Services"
-          links={SERVICES.slice(0, 6).map((s) => ["/services", s.title] as const)}
+          links={SERVICES.slice(0, 6).map(
+            (s) => ["/services", s.title] as const
+          )}
         />
 
         <FooterCol
@@ -108,11 +121,16 @@ function FooterCol({
 }) {
   return (
     <div>
-      <h4 className="font-display text-sm uppercase tracking-[0.18em] text-ink">{title}</h4>
+      <h4 className="font-display text-sm uppercase tracking-[0.18em] text-ink">
+        {title}
+      </h4>
       <ul className="mt-4 space-y-2.5">
         {links.map(([to, label]) => (
           <li key={label}>
-            <Link to={to} className="text-sm text-muted-foreground transition hover:text-primary">
+            <Link
+              to={to}
+              className="text-sm text-muted-foreground transition hover:text-primary"
+            >
               {label}
             </Link>
           </li>

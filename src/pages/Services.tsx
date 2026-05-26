@@ -13,7 +13,7 @@ export default function ServicesPage() {
       />
       <Services />
       <Process />
-      <CtaBand />
+      {/* <CtaBand /> */}
     </>
   );
 }

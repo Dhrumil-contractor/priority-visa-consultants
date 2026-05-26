@@ -41,7 +41,7 @@ export default function About() {
         <SectionHeader
           eyebrow="About Priority Visa"
           title="A consultancy built on honesty, expertise and care."
-          subtitle="For over a decade, we've helped Indian families turn international ambitions into landings. Our promise is simple — clear advice, premium service, no shortcuts."
+          subtitle="Though Priority Visa Consultants launched just a year ago, our founder brings over 8 years of hands-on experience in the immigration field. Our promise is simple — clear advice, premium service, no shortcuts.."
         />
 
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -60,20 +60,23 @@ export default function About() {
 
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           <Reveal>
-            <div className="rounded-3xl border border-border bg-secondary/60 p-8 lg:p-10">
+            <div className="rounded-3xl border border-border bg-card p-8 shadow-soft lg:p-10">
               <h3 className="font-display text-2xl text-ink">Our mission</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-                To make global mobility accessible, transparent and stress-free — by pairing every
-                traveller with a senior advisor who treats their case like their own.
+                To make global mobility accessible, transparent and stress-free
+                by pairing every traveller with a senior advisor who treats
+                their case like their own.
               </p>
             </div>
           </Reveal>
+
           <Reveal delay={0.1}>
             <div className="rounded-3xl border border-border bg-card p-8 shadow-soft lg:p-10">
               <h3 className="font-display text-2xl text-ink">Our vision</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-                To be India's most trusted name for international visas — measured not by volume,
-                but by the lives we help launch across borders.
+                To be India's most trusted name for international visas —
+                measured not by volume, but by the lives we help launch across
+                borders.
               </p>
             </div>
           </Reveal>

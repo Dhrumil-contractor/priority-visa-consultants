@@ -11,9 +11,9 @@ export const NAV_LINKS = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/countries", label: "Countries" },
-  { to: "/tour-packages", label: "Tour Packages" },
+  // { to: "/tour-packages", label: "Tour Packages" },
   { to: "/success-stories", label: "Success Stories" },
-  { to: "/free-counselling", label: "Free Counselling" },
+  // { to: "/free-counselling", label: "Free Counselling" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -112,12 +112,12 @@ export const SERVICES = [
     icon: "Compass",
     desc: "Hand-picked international holidays with visa, stay and flights.",
   },
-  {
-    slug: "counselling",
-    title: "Free Counselling",
-    icon: "MessageCircle",
-    desc: "Honest, no-obligation profile evaluation by senior advisors.",
-  },
+  // {
+  //   slug: "counselling",
+  //   title: "Free Counselling",
+  //   icon: "MessageCircle",
+  //   desc: "Honest, no-obligation profile evaluation by senior advisors.",
+  // },
 ] as const;
 
 export const WHY_US = [
@@ -183,44 +183,53 @@ export const PROCESS_STEPS = [
 
 export const TESTIMONIALS = [
   {
-    name: "Aanya Sharma",
-    country: "Canada",
-    program: "Student Visa",
-    quote:
-      "From shortlisting Conestoga to getting my study permit — Priority made it effortless. I landed in Toronto with zero stress.",
-  },
-  {
-    name: "Rohit Verma",
-    country: "United Kingdom",
-    program: "Work Visa",
-    quote:
-      "Their team understood my profile better than I did. The Skilled Worker route felt clear from day one.",
-  },
-  {
-    name: "Mehul & Family",
-    country: "Australia",
+    name: "DipeshKumar Kothari & Family",
+    country: "USA",
     program: "Visitor Visa",
-    quote: "All four visas approved in 11 days. The documentation checklist alone is worth gold.",
-  },
-  {
-    name: "Priyanka Iyer",
-    country: "Schengen",
-    program: "Tourist Visa",
     quote:
-      "Honeymoon in Italy, France and Switzerland. Priority booked, planned and got us the Schengen — flawless.",
+      "Successfully obtained my USA visitor visa. Highly satisfied with the seamless process and expert guidance provided.",
   },
   {
-    name: "Karan Bhatia",
-    country: "New Zealand",
-    program: "Student Visa",
-    quote: "Auckland Uni offer + visa in one shot. Varun sir personally reviewed my SOP twice.",
-  },
-  {
-    name: "Anjali Mehta",
-    country: "UAE",
-    program: "Dependent Visa",
+    name: "Dr. RasheshKumar Nahar & Family",
+    country: "USA",
+    program: "Visitor Visa",
     quote:
-      "Joined my husband in Dubai within weeks. The Priority team coordinated everything end-to-end.",
+      "Had a prior refusal on our USA visitor visa, but Priority Visa Consultants got it approved in just one attempt. Truly grateful for their expertise",
+  },
+  {
+    name: "Mansi Bendre",
+    country: "Canada",
+    program: "PGWP",
+    quote:
+      "Successfully obtained my Post-Graduation Work Permit (PGWP). Very satisfied with the professional guidance provided throughout the process.",
+  },
+  {
+    name: "Dhruv Patel",
+    country: "UK",
+    program: "Visitor Visa",
+    quote:
+      "Successfully selected for the UK Young Professionals Scheme visa. Extremely satisfied with the guidance and support throughout the process.",
+  },
+  {
+    name: "Hitendra Patel & Family",
+    country: "UK",
+    program: "Visitor Visa",
+    quote:
+      "After two rejections from other consultancies, our visa was finally approved with Priority Visa Consultants. The professionalism and attention to detail were outstanding.",
+  },
+  {
+    name: "Kamlesh Shah & Family",
+    country: "Canada",
+    program: "Visitor Visa",
+    quote:
+      "Received our visitor visa within 3 weeks. Thoroughly satisfied with the professionalism and service",
+  },
+  {
+    name: "Maheshkumar Jani & Family",
+    country: "UK",
+    program: "Visitor Visa",
+    quote:
+      "Received my UK visitor visa within just 2 weeks. Impressively fast and smooth process. Highly recommend Priority Visa Consultants.",
   },
 ] as const;
 
@@ -287,10 +296,10 @@ export const FAQS = [
 ] as const;
 
 export const STATS = [
-  { value: "10,000+", label: "Visa Approvals" },
-  { value: "8,500+", label: "Happy Clients" },
+  { value: "20+", label: "Visa Approvals" },
+  { value: "25+", label: "Happy Clients" },
   { value: "25+", label: "Countries Served" },
-  { value: "12+", label: "Years Experience" },
+  { value: "5+", label: "Years Experience" },
 ] as const;
 
 export const COMPANY = {

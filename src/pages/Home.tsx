@@ -17,12 +17,12 @@ export default function Home() {
       <Hero />
       <About />
       <Services />
-      <Countries />
+      {/* <Countries /> */}
       <WhyUs />
       <Process />
       <Stories />
-      <Packages limit={3} />
-      <CtaBand />
+      {/* <Packages limit={6} /> */}
+      {/* <CtaBand /> */}
       <Faq />
     </PageTransition>
   );

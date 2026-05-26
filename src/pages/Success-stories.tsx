@@ -5,19 +5,14 @@ import { TESTIMONIALS } from "@/data/site";
 import Reveal from "@/components/Reveal";
 import CtaBand from "@/sections/CTABand";
 
-const FILTERS = [
-  "All",
-  "Canada",
-  "United Kingdom",
-  "Australia",
-  "Schengen",
-  "New Zealand",
-  "UAE",
-] as const;
+const FILTERS = ["All", "USA", "UK", "Canada"] as const;
 
 export default function StoriesPage() {
   const [filter, setFilter] = useState<(typeof FILTERS)[number]>("All");
-  const items = filter === "All" ? TESTIMONIALS : TESTIMONIALS.filter((t) => t.country === filter);
+  const items =
+    filter === "All"
+      ? TESTIMONIALS
+      : TESTIMONIALS.filter((t) => t.country === filter);
 
   return (
     <>
@@ -51,13 +46,20 @@ export default function StoriesPage() {
                 <article className="hover-lift h-full rounded-3xl border border-border bg-card p-7 shadow-soft">
                   <div className="flex gap-1">
                     {[0, 1, 2, 3, 4].map((s) => (
-                      <Star key={s} className="h-3.5 w-3.5 fill-gold text-gold" />
+                      <Star
+                        key={s}
+                        className="h-3.5 w-3.5 fill-gold text-gold"
+                      />
                     ))}
                   </div>
-                  <p className="mt-4 text-[15px] leading-relaxed text-foreground">"{t.quote}"</p>
+                  <p className="mt-4 text-[15px] leading-relaxed text-foreground">
+                    "{t.quote}"
+                  </p>
                   <div className="mt-6 flex items-center justify-between border-t border-border pt-4">
                     <div>
-                      <p className="font-display text-base text-ink">{t.name}</p>
+                      <p className="font-display text-base text-ink">
+                        {t.name}
+                      </p>
                       <p className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
                         {t.program}
                       </p>
@@ -73,7 +75,7 @@ export default function StoriesPage() {
         </div>
       </section>
 
-      <CtaBand />
+      {/* <CtaBand /> */}
     </>
   );
 }

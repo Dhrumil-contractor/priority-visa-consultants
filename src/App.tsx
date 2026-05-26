@@ -11,8 +11,11 @@ import CountriesPage from "./pages/Countries";
 import PackagesPage from "./pages/Tour-packages";
 import StoriesPage from "./pages/Success-stories";
 import CounsellingPage from "./pages/Free-counselling";
+import { use } from "react";
+import { useScrollToTop } from "./hooks/useScrollToTop";
 
 export default function App() {
+  useScrollToTop();
   const location = useLocation();
   return (
     <MainLayout>

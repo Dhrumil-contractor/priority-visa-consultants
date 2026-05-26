@@ -1,4 +1,12 @@
-import { MapPin, Mail, Phone, MessageCircle, Instagram, Facebook, Linkedin } from "lucide-react";
+import {
+  MapPin,
+  Mail,
+  Phone,
+  MessageCircle,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from "lucide-react";
 import { PageHero } from "@/components/PageHero";
 import { COMPANY, COUNTRIES } from "@/data/site";
 import Reveal from "@/components/Reveal";
@@ -8,8 +16,8 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's plan your next chapter."
-        subtitle="Drop us a line — we reply to every enquiry within one business day."
+        title="Book your free visa consultation."
+        subtitle="A Founder will personally review your profile and recommend the best path at no cost, with zero pressure."
       />
 
       <section className="pt-14 pb-24 lg:pt-20">
@@ -19,18 +27,33 @@ export default function ContactPage() {
               onSubmit={(e) => e.preventDefault()}
               className="rounded-3xl border border-border bg-card p-8 shadow-luxe"
             >
-              <p className="font-display text-2xl text-ink">Send us a message</p>
+              <p className="font-display text-2xl text-ink">
+                Send us a message
+              </p>
 
               <div className="mt-6 grid gap-4 sm:grid-cols-2">
                 <Input label="Name" placeholder="Your full name" />
                 <Input label="Email" placeholder="you@email.com" type="email" />
                 <Input label="Phone" placeholder="+91 98765 43210" />
-                <SelectField label="Country interest" options={COUNTRIES.map((c) => c.name)} />
+                <SelectField
+                  label="Country interest"
+                  options={COUNTRIES.map((c) => c.name)}
+                />
                 <SelectField
                   label="Visa type"
-                  options={["Student", "Visitor", "Tourist", "Work", "Dependent", "Passport"]}
+                  options={[
+                    "Student",
+                    "Visitor",
+                    "Tourist",
+                    "Work",
+                    "Dependent",
+                    "Passport",
+                  ]}
                 />
-                <Input label="Best time to call" placeholder="e.g. weekday evenings" />
+                <Input
+                  label="Best time to call"
+                  placeholder="e.g. weekday evenings"
+                />
               </div>
 
               <label className="mt-4 block text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
@@ -67,17 +90,20 @@ export default function ContactPage() {
               </a>
 
               <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-soft">
-                <div className="relative aspect-[16/10] bg-luxe-gradient">
-                  <div className="absolute inset-0 grid place-items-center">
-                    <div className="text-center">
-                      <MapPin className="mx-auto h-8 w-8 text-primary" />
-                      <p className="mt-2 font-display text-lg text-ink">Bharuch Head Office</p>
-                      <p className="text-xs text-muted-foreground">{COMPANY.address}</p>
-                    </div>
-                  </div>
+                <div className="relative aspect-[16/10]">
+                  <iframe
+                    title="Priority Visa Consultancy location"
+                    src="https://www.google.com/maps?q=21.921150848885645,73.07426270969472&z=16&output=embed"
+                    className="absolute inset-0 h-full w-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
                 <div className="flex items-center justify-between p-5">
-                  <p className="text-sm text-muted-foreground">Find us on the map</p>
+                  <p className="text-sm text-muted-foreground">
+                    Find us on the map
+                  </p>
                   <div className="flex gap-2">
                     {[Instagram, Facebook, Linkedin].map((I, idx) => (
                       <a
@@ -135,7 +161,13 @@ function Input({
   );
 }
 
-function SelectField({ label, options }: { label: string; options: readonly string[] }) {
+function SelectField({
+  label,
+  options,
+}: {
+  label: string;
+  options: readonly string[];
+}) {
   return (
     <label className="block">
       <span className="block text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">

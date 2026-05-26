@@ -19,7 +19,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3.5 py-1.5 text-[11px] font-medium uppercase tracking-[0.18em] text-muted-foreground shadow-soft backdrop-blur"
           >
             <Sparkles className="h-3 w-3 text-gold" />
-            Trusted by 8,500+ travellers
+            Trusted by 50+ travellers
           </motion.span>
 
           <motion.h1
@@ -41,8 +41,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="mt-6 max-w-xl text-[15.5px] leading-relaxed text-muted-foreground"
           >
-            Helping students, tourists and professionals achieve their international dreams with
-            honest, premium visa guidance — country by country, document by document.
+            Helping students, tourists and professionals achieve their
+            international dreams with honest, premium visa guidance — country by
+            country, document by document.
           </motion.p>
 
           <motion.div
@@ -60,7 +61,7 @@ export default function Hero() {
             </Link>
             <Link
               to="/countries"
-              className="group inline-flex items-center gap-2 rounded-full bg-emerald-gradient px-6 py-3.5 text-sm font-medium text-primary-foreground shadow-glow transition-transform hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-medium text-foreground shadow-soft transition hover:bg-secondary"
             >
               Explore Countries
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
@@ -77,7 +78,7 @@ export default function Hero() {
               {[0, 1, 2, 3, 4].map((i) => (
                 <Star key={i} className="h-3.5 w-3.5 fill-gold text-gold" />
               ))}
-              <span className="ml-1">4.9 on Google</span>
+              <span className="ml-1">5.0 on Google</span>
             </div>
             <div className="flex items-center gap-1.5">
               <BadgeCheck className="h-4 w-4 text-primary" />
@@ -114,14 +115,21 @@ export default function Hero() {
                   <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
                     Visa Approved
                   </p>
-                  <p className="text-sm font-medium text-ink">Canada · Study Permit</p>
+                  <p className="text-sm font-medium text-ink">
+                    UK · Study Permit
+                  </p>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
               animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              transition={{
+                duration: 7,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 1,
+              }}
               className="glass absolute -right-1 top-1/2 w-44 rounded-2xl border border-border p-3.5 shadow-luxe"
             >
               <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
@@ -136,7 +144,12 @@ export default function Hero() {
 
             <motion.div
               animate={{ y: [0, -8, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 2,
+              }}
               className="glass absolute -bottom-1 left-6 flex w-64 items-center gap-3 rounded-2xl border border-border p-3.5 shadow-luxe"
             >
               <div className="flex -space-x-1.5">

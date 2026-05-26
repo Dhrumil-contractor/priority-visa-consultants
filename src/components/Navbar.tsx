@@ -26,12 +26,16 @@ export function Navbar() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-500 h-16",
-        scrolled ? "glass border-b border-border/60" : "bg-transparent",
+        scrolled ? "glass border-b border-border/60" : "bg-transparent"
       )}
     >
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link to="/" className="group flex items-center gap-2.5">
-          <img src={logo} alt="Priority Visa Consultancy" className="h-30 w-30" />
+          <img
+            src={logo}
+            alt="Priority Visa Consultancy"
+            className="h-30 w-30"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -43,7 +47,9 @@ export function Navbar() {
                 to={l.to}
                 className={cn(
                   "relative rounded-full px-3.5 py-2 text-[13.5px] font-medium transition-colors",
-                  active ? "text-foreground" : "text-muted-foreground hover:text-foreground",
+                  active
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {l.label}
@@ -61,7 +67,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <Link
-            to="/free-counselling"
+            to="/contact"
             className="hidden rounded-full bg-emerald-gradient px-5 py-2.5 text-[13px] font-medium text-primary-foreground shadow-glow transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
             Book Free Consultation
@@ -94,7 +100,7 @@ export function Navbar() {
                     "rounded-xl px-4 py-3 text-sm font-medium",
                     location.pathname === l.to
                       ? "bg-secondary text-foreground"
-                      : "text-muted-foreground hover:bg-secondary/60",
+                      : "text-muted-foreground hover:bg-secondary/60"
                   )}
                 >
                   {l.label}

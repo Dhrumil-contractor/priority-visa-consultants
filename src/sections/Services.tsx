@@ -32,7 +32,7 @@ export default function Services() {
         <SectionHeader
           eyebrow="Our Services"
           title="Every visa, handled with the same premium care."
-          subtitle="From student permits to luxury tour packages — one team, one case manager, one beautiful experience."
+          subtitle="From student permits to visitor visas — every case handled personally by Founder, with dedicated attention and zero handoffs."
         />
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -48,8 +48,12 @@ export default function Services() {
                     <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-gradient text-primary-foreground shadow-glow">
                       <Icon className="h-5 w-5" strokeWidth={1.8} />
                     </span>
-                    <h3 className="mt-5 font-display text-xl text-ink">{s.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                    <h3 className="mt-5 font-display text-xl text-ink">
+                      {s.title}
+                    </h3>
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      {s.desc}
+                    </p>
                   </div>
                   <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
                     Learn more
