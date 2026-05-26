@@ -22,14 +22,17 @@ export function CountriesGrid({ limit }: { limit?: number }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/10 to-transparent" />
               <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-card/90 px-3 py-1 text-xs font-medium text-ink shadow-soft backdrop-blur">
-                <span className="text-base leading-none">{c.flag}</span> {c.name}
+                <span className="text-base leading-none">{c.flag}</span>{" "}
+                {c.name}
               </span>
             </div>
             <div className="flex items-center justify-between gap-4 p-6">
-              <p className="text-sm leading-relaxed text-muted-foreground">{c.blurb}</p>
-              <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-foreground transition group-hover:bg-emerald-gradient group-hover:text-primary-foreground">
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                {c.blurb}
+              </p>
+              {/* <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-foreground transition group-hover:bg-emerald-gradient group-hover:text-primary-foreground">
                 <ArrowUpRight className="h-4 w-4" />
-              </span>
+              </span> */}
             </div>
           </Link>
         </Reveal>

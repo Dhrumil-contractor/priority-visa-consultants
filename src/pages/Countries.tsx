@@ -7,7 +7,9 @@ import CtaBand from "@/sections/CTABand";
 
 export default function CountriesPage() {
   const [q, setQ] = useState("");
-  const filtered = COUNTRIES.filter((c) => c.name.toLowerCase().includes(q.toLowerCase()));
+  const filtered = COUNTRIES.filter((c) =>
+    c.name.toLowerCase().includes(q.toLowerCase())
+  );
 
   return (
     <>
@@ -19,7 +21,7 @@ export default function CountriesPage() {
 
       <section className="py-12">
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
-          <div className="mx-auto flex max-w-md items-center gap-2 rounded-full border border-border bg-card px-4 py-3 shadow-soft">
+          {/* <div className="mx-auto flex max-w-md items-center gap-2 rounded-full border border-border bg-card px-4 py-3 shadow-soft">
             <Search className="h-4 w-4 text-muted-foreground" />
             <input
               value={q}
@@ -27,7 +29,7 @@ export default function CountriesPage() {
               placeholder="Search countries…"
               className="flex-1 bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
-          </div>
+          </div> */}
           {filtered.length > 0 ? (
             <CountriesGrid />
           ) : (
@@ -38,7 +40,7 @@ export default function CountriesPage() {
         </div>
       </section>
 
-      <CtaBand />
+      {/* <CtaBand /> */}
     </>
   );
 }
