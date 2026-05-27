@@ -8,10 +8,11 @@ export default function Stories() {
   const [i, setI] = useState(0);
   const t = TESTIMONIALS[i];
   const next = () => setI((p) => (p + 1) % TESTIMONIALS.length);
-  const prev = () => setI((p) => (p - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  const prev = () =>
+    setI((p) => (p - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
 
   return (
-    <section className="relative bg-secondary/40 py-24 lg:py-32">
+    <section className="relative bg-secondary/40 py-10 lg:py-14">
       <div className="mx-auto max-w-5xl px-5 lg:px-8">
         <SectionHeader
           eyebrow="Success Stories"

@@ -7,7 +7,7 @@ import { FAQS } from "@/data/site";
 export default function Faq() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-10 lg:py-14">
       <div className="mx-auto max-w-3xl px-5 lg:px-8">
         <SectionHeader eyebrow="FAQ" title="Questions, answered honestly." />
         <div className="mt-14 divide-y divide-border rounded-3xl border border-border bg-card shadow-soft">
@@ -19,7 +19,9 @@ export default function Faq() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-6 px-6 py-5 text-left"
                 >
-                  <span className="font-display text-[17px] text-ink">{f.q}</span>
+                  <span className="font-display text-[17px] text-ink">
+                    {f.q}
+                  </span>
                   <span
                     className={`inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border bg-secondary text-foreground transition ${isOpen ? "rotate-45 bg-emerald-gradient text-primary-foreground" : ""}`}
                   >

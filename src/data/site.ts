@@ -306,7 +306,7 @@ export const COMPANY = {
   name: "Priority Visa Consultants",
   short: "Priority Visa",
   tagline: "Your Global Journey Starts Here.",
-  phone: "91 90164 23501",
+  phone: "+91 90164 23501",
   whatsapp: "9016423501",
   email: "info@priorityvisaconsultants.com",
   address:

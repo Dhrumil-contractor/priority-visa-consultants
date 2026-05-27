@@ -4,7 +4,8 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", "Plus Jakarta Sans", serif;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -40,8 +41,10 @@
   --color-cream: var(--cream);
   --color-ink: var(--ink);
 
-  --shadow-soft: 0 1px 2px oklch(0.2 0.02 160 / 0.04), 0 8px 24px oklch(0.2 0.02 160 / 0.06);
-  --shadow-luxe: 0 2px 4px oklch(0.2 0.02 160 / 0.04), 0 20px 60px oklch(0.2 0.02 160 / 0.12);
+  --shadow-soft:
+    0 1px 2px oklch(0.2 0.02 160 / 0.04), 0 8px 24px oklch(0.2 0.02 160 / 0.06);
+  --shadow-luxe:
+    0 2px 4px oklch(0.2 0.02 160 / 0.04), 0 20px 60px oklch(0.2 0.02 160 / 0.12);
   --shadow-glow: 0 8px 40px oklch(0.34 0.12 255 / 0.28);
 }
 
@@ -86,23 +89,40 @@
 }
 
 .dark {
-  --background: oklch(0.14 0.012 200);
-  --foreground: oklch(0.97 0.005 95);
-  --card: oklch(0.18 0.012 200);
-  --card-foreground: oklch(0.97 0.005 95);
-  --popover: oklch(0.18 0.012 200);
-  --popover-foreground: oklch(0.97 0.005 95);
-  --primary: oklch(0.74 0.1 165);
-  --primary-foreground: oklch(0.14 0.012 200);
-  --secondary: oklch(0.22 0.012 200);
-  --secondary-foreground: oklch(0.97 0.005 95);
-  --muted: oklch(0.22 0.012 200);
-  --muted-foreground: oklch(0.7 0.012 200);
-  --accent: oklch(0.62 0.08 175);
-  --accent-foreground: oklch(0.14 0.012 200);
-  --border: oklch(1 0 0 / 0.1);
-  --input: oklch(1 0 0 / 0.15);
-  --ring: oklch(0.62 0.08 175);
+  --background: oklch(0.16 0.018 260);
+  --foreground: oklch(0.96 0.005 95);
+  --ink: oklch(0.98 0.005 95);
+
+  --card: oklch(0.21 0.02 260);
+  --card-foreground: oklch(0.96 0.005 95);
+
+  --popover: oklch(0.21 0.02 260);
+  --popover-foreground: oklch(0.96 0.005 95);
+
+  --primary: oklch(0.72 0.13 250);
+  --primary-foreground: oklch(0.14 0.018 260);
+  --emerald-deep: oklch(0.42 0.14 255);
+
+  --secondary: oklch(0.24 0.02 260);
+  --secondary-foreground: oklch(0.96 0.005 95);
+  --cream: oklch(0.22 0.02 260);
+
+  --muted: oklch(0.24 0.02 260);
+  --muted-foreground: oklch(0.74 0.014 240);
+  --platinum: oklch(0.28 0.02 260);
+
+  --accent: oklch(0.68 0.1 200);
+  --accent-foreground: oklch(0.14 0.018 260);
+
+  --gold: oklch(0.82 0.13 80);
+  --gold-soft: oklch(0.6 0.1 80);
+
+  --destructive: oklch(0.62 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 95);
+
+  --border: oklch(1 0 0 / 0.08);
+  --input: oklch(1 0 0 / 0.12);
+  --ring: oklch(0.72 0.13 250);
 }
 
 @layer base {
@@ -154,8 +174,16 @@
 
   .bg-luxe-gradient {
     background-image:
-      radial-gradient(60% 60% at 80% 0%, oklch(0.88 0.07 85 / 0.35) 0%, transparent 60%),
-      radial-gradient(50% 60% at 0% 100%, oklch(0.55 0.08 175 / 0.2) 0%, transparent 60%),
+      radial-gradient(
+        60% 60% at 80% 0%,
+        oklch(0.88 0.07 85 / 0.35) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        50% 60% at 0% 100%,
+        oklch(0.55 0.08 175 / 0.2) 0%,
+        transparent 60%
+      ),
       linear-gradient(180deg, var(--background), var(--cream));
   }
 
@@ -166,6 +194,7 @@
       oklch(0.34 0.12 255) 55%,
       oklch(0.46 0.14 250)
     );
+    color: oklch(0.99 0.005 95);
   }
   .text-gold {
     color: var(--gold);

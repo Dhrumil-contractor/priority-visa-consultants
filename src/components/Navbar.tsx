@@ -4,11 +4,14 @@ import { NAV_LINKS, COMPANY } from "@/data/site";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Link, useLocation } from "react-router-dom";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import logo from "@/assets/logo.png";
+import darklogo from "@/assets/darklogo.png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -16,6 +19,22 @@ export function Navbar() {
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   useEffect(() => {
@@ -32,7 +51,7 @@ export function Navbar() {
       <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-5 lg:px-8">
         <Link to="/" className="group flex items-center gap-2.5">
           <img
-            src={logo}
+            src={isDark ? darklogo : logo}
             alt="Priority Visa Consultancy"
             className="h-30 w-30"
           />
@@ -72,6 +91,7 @@ export function Navbar() {
           >
             Book Free Consultation
           </Link>
+          <ThemeToggle />
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}

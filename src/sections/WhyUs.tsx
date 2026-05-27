@@ -21,7 +21,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 export default function WhyUs() {
   return (
-    <section className="relative bg-secondary/40 py-24 lg:py-32">
+    <section className="relative bg-secondary/40 py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeader
           eyebrow="Why Choose Us"
@@ -36,8 +36,12 @@ export default function WhyUs() {
                   <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary text-primary ring-1 ring-border">
                     <Icon className="h-5 w-5" strokeWidth={1.8} />
                   </span>
-                  <h3 className="mt-5 font-display text-xl text-ink">{w.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{w.desc}</p>
+                  <h3 className="mt-5 font-display text-xl text-ink">
+                    {w.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {w.desc}
+                  </p>
                 </div>
               </Reveal>
             );

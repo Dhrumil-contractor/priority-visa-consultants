@@ -80,7 +80,7 @@ export default function ContactPage() {
               >
                 <div>
                   <p className="font-display text-xl">Chat on WhatsApp</p>
-                  <p className="mt-1 text-sm text-primary-foreground/85">
+                  <p className="mt-1 text-sm text-primary-foreground/85 dark:text-white">
                     Instant replies from a senior advisor.
                   </p>
                 </div>

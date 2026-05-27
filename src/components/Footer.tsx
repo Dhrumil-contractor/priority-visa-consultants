@@ -1,28 +1,49 @@
 import { Link } from "react-router-dom";
 import {
-  Globe2,
   Mail,
   Phone,
   MapPin,
   Instagram,
   Facebook,
   Linkedin,
-  Youtube,
 } from "lucide-react";
 import { COMPANY, COUNTRIES, SERVICES, SOCIAL_LINKS } from "@/data/site";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import logo from "@/assets/logo.png";
+import darklogo from "@/assets/darklogo.png";
+import { useEffect, useState } from "react";
 
 export function Footer() {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDark(document.documentElement.classList.contains("dark"));
+    };
+
+    checkDarkMode();
+
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
   return (
-    <footer className="relative mt-24 overflow-hidden border-t border-border bg-secondary/50">
+    <footer className="relative mt-16 overflow-hidden border-t border-border bg-secondary/50">
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold to-transparent opacity-60" />
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-5 lg:px-8">
         <div className="lg:col-span-2">
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-gradient text-primary-foreground">
-              <Globe2 className="h-4.5 w-4.5" />
-            </span>
+            <img
+              src={isDark ? darklogo : logo}
+              alt="Priority Visa Consultancy"
+              className="h-12 w-12 object-contain"
+            />
             <span className="font-display text-lg text-ink">
-              Priority Visa Consultancy
+              Priority Visa Consultants
             </span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">

@@ -36,7 +36,7 @@ function Counter({ value }: { value: string }) {
 
 export default function About() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeader
           eyebrow="About Priority Visa"

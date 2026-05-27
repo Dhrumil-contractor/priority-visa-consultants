@@ -27,7 +27,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 export default function Services() {
   return (
-    <section className="relative bg-secondary/40 py-24 lg:py-32">
+    <section className="relative bg-secondary/40 py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeader
           eyebrow="Our Services"
@@ -55,10 +55,10 @@ export default function Services() {
                       {s.desc}
                     </p>
                   </div>
-                  <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
+                  {/* <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-primary">
                     Learn more
                     <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </div>
+                  </div> */}
                   <span className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/15 blur-2xl opacity-0 transition-opacity group-hover:opacity-100" />
                 </Link>
               </Reveal>

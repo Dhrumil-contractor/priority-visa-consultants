@@ -3,9 +3,12 @@ import { PROCESS_STEPS } from "@/data/site";
 
 export default function Process() {
   return (
-    <section className="relative py-24 lg:py-32">
+    <section className="relative py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <SectionHeader eyebrow="Visa Process" title="A clear, five-step path to your approval." />
+        <SectionHeader
+          eyebrow="Visa Process"
+          title="A clear, five-step path to your approval."
+        />
         <div className="relative mt-16">
           <div className="pointer-events-none absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent lg:block" />
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">

@@ -29,7 +29,7 @@ export default function Hero() {
             className="mt-6 font-display text-[2.6rem] leading-[1.05] tracking-tight text-balance text-ink sm:text-6xl lg:text-[4.2rem]"
           >
             Your{" "}
-            <em className="not-italic bg-emerald-gradient bg-clip-text text-transparent">
+            <em className="not-italic bg-blue-950  dark:bg-white bg-clip-text text-transparent ">
               global journey
             </em>
             <br className="hidden sm:block" /> starts here.
@@ -156,7 +156,7 @@ export default function Hero() {
                 {COUNTRIES.slice(0, 4).map((c) => (
                   <span
                     key={c.slug}
-                    className="grid h-8 w-8 place-items-center rounded-full border-2 border-background bg-card text-base"
+                    className="grid h-8 w-8 place-items-center rounded-full border-2 border-background bg-card text-base dark:bg-white dark:border-white"
                   >
                     {c.flag}
                   </span>
